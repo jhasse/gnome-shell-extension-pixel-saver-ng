@@ -1,13 +1,16 @@
-Pixel Saver
-===========
+# Pixel Saver NG
+
+This is a fork of [Pixel Saver](https://github.com/deadalnix/pixel-saver), with the difference that
+it only works on GNOME 3.24 or newer because it removes a workaround for a
+[bug](https://bugzilla.gnome.org/show_bug.cgi?id=781862) in earlier GNOME versions.
 
 Pixel Saver is an extension for Gnome Shell that merge the activity bar and the
 title bar of maximized window. It is especially interesting for small screens,
-but MOAR pixels for your apps is always good !
+but MOAR pixels for your apps is always good!
 
 The extension has no configuration. Its behavior is made to mimic the one of
 the title bar and settings affecting the title bar should reflect in
-Pixel Saver. It **Just Works** !
+Pixel Saver. It **Just Works**!
 
 For applications using the modern GTK header bar, there are no space savings,
 but the application title is still displayed in the top panel to achieve a
@@ -15,8 +18,8 @@ uniform appearance.
 
 <table>
 	<tr>
-		<td><img src="https://raw.github.com/deadalnix/pixel-saver/master/title.png" /></td>
-		<td><img src="https://raw.github.com/deadalnix/pixel-saver/master/icons.png" /></td>
+		<td><img src="title.png?raw=true" /></td>
+		<td><img src="icons.png?raw=true" /></td>
 	</tr>
 	<tr>
 		<td colspan="2">The title bar is completely gone and integrated to the activity bar.</td>
@@ -32,14 +35,10 @@ Install it with one click from the [GNOME extension repository](https://extensio
 
 You can also follow these simply instruction for manual installation :
 
-    git clone https://github.com/deadalnix/pixel-saver.git
-    cd pixel-saver
-    # Get the last released version
-	git checkout 1.9
-    # copy to extensions directory
-    cp -r pixel-saver@deadalnix.me -t ~/.local/share/gnome-shell/extensions
-    # activate
-    gnome-shell-extension-tool -e pixel-saver@deadalnix.me
+    git clone https://github.com/jhasse/gnome-shell-extensions-pixel-saver-ng
+    cd gnome-shell-extensions-pixel-saver-ng
+    ln -s $PWD/pixel-saver@deadalnix.me ~/.local/share/gnome-shell/extensions/pixel-saver-ng@bixense.com
+    gnome-shell-extension-tool -e pixel-saver-ng@bixense.com
 
 For code changes to become effective, you might need to reload GNOME Shell
 by pressing <kbd>Alt</kbd> + <kbd>F2</kbd> and entering <kbd>r</kbd> .
@@ -53,24 +52,8 @@ present on your system, these can be installed using:
 * Fedora/RHEL: `dnf install xorg-x11-utils`
 * Arch: `pacman -S xorg-xprop`
 
-Configuration
--------------
-
-Don't be silly !
-
-Support for older versions of gnome shell
------------
-
-If you use an older version of gnome shell, here are the versions of pixel saver that you should use.
-
-| Gnome Shell | Latest recomanded version                                            |
-|-------------|----------------------------------------------------------------------|
-| 3.12        | [1.3](https://github.com/deadalnix/pixel-saver/releases/tag/1.3)     |
-| 3.14        | [1.5.1](https://github.com/deadalnix/pixel-saver/releases/tag/1.5.1) |
-| 3.15        | [1.10](https://github.com/deadalnix/pixel-saver/releases/tag/1.10)   |
-
 Screenshots
 -----------
 
-If you want to see what the full desktop look like with this extension, you can check out what a [unmaximized window](https://raw.github.com/deadalnix/pixel-saver/master/unmax.png) looks like, as well as a [maximized one](https://raw.github.com/deadalnix/pixel-saver/master/max.png).
-
+If you want to see what the full desktop look like with this extension, you can check out what an
+[unmaximized window](unmax.png?raw=true) looks like, as well as a [maximized one](max.png?raw=true).
