@@ -231,7 +231,8 @@ function setHideTitlebar(win, hide) {
  * @see undecorate
  */
 function onWindowAdded(ws, win, retry) {
-	if (win.window_type === Meta.WindowType.DESKTOP) {
+	if (win.window_type === Meta.WindowType.DESKTOP ||
+	    win.window_type === Meta.WindowType.MODAL_DIALOG) {
 		return false;
 	}
 
